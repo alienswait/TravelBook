@@ -18,31 +18,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wF4-ml-5w8">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="317" width="393" height="419"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPP-XK-tJ5">
+                                <rect key="frame" x="16" y="156" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gZ-Rg-Hfw">
+                                <rect key="frame" x="16" y="220" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlc-16-Lvj">
+                                <rect key="frame" x="145" y="744" width="102" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="q7V-1H-QbG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oga-h0-Cn9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wF4-ml-5w8" secondAttribute="trailing" id="Wb1-6Z-7zG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wF4-ml-5w8" secondAttribute="bottom" id="ZDw-wh-Nkd"/>
-                            <constraint firstItem="wF4-ml-5w8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fyU-tf-NCD"/>
-                            <constraint firstItem="wF4-ml-5w8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iBT-Gi-sI4"/>
+                            <constraint firstItem="wF4-ml-5w8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FWZ-Ol-gOd"/>
+                            <constraint firstItem="Xlc-16-Lvj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="Oht-jW-8Dv"/>
+                            <constraint firstItem="GPP-XK-tJ5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pli-Tb-dAK"/>
+                            <constraint firstItem="5gZ-Rg-Hfw" firstAttribute="top" secondItem="GPP-XK-tJ5" secondAttribute="bottom" constant="30" id="QZi-bv-J1A"/>
+                            <constraint firstItem="wF4-ml-5w8" firstAttribute="top" secondItem="5gZ-Rg-Hfw" secondAttribute="bottom" constant="63" id="Rym-Rs-weR"/>
+                            <constraint firstItem="wF4-ml-5w8" firstAttribute="centerX" secondItem="Xlc-16-Lvj" secondAttribute="centerX" id="T8e-Zu-afy"/>
+                            <constraint firstItem="GPP-XK-tJ5" firstAttribute="leading" secondItem="5gZ-Rg-Hfw" secondAttribute="leading" id="TKh-1c-M5N"/>
+                            <constraint firstItem="GPP-XK-tJ5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="g5n-Gd-yO3"/>
+                            <constraint firstItem="Xlc-16-Lvj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lIv-de-P1y"/>
+                            <constraint firstItem="GPP-XK-tJ5" firstAttribute="trailing" secondItem="5gZ-Rg-Hfw" secondAttribute="trailing" id="ryS-b0-xxe"/>
+                            <constraint firstItem="5gZ-Rg-Hfw" firstAttribute="centerX" secondItem="wF4-ml-5w8" secondAttribute="centerX" id="sjg-n8-Cye"/>
+                            <constraint firstItem="Xlc-16-Lvj" firstAttribute="top" secondItem="wF4-ml-5w8" secondAttribute="bottom" constant="8" id="tZL-Ci-5NN"/>
+                            <constraint firstItem="GPP-XK-tJ5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="xhu-ak-wg4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentText" destination="5gZ-Rg-Hfw" id="LT9-F6-4MH"/>
                         <outlet property="mapView" destination="wF4-ml-5w8" id="A1M-Nv-RrO"/>
+                        <outlet property="nameText" destination="GPP-XK-tJ5" id="Aku-RX-xGP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="4"/>
+            <point key="canvasLocation" x="58.778625954198468" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
